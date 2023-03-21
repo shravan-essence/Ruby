@@ -115,3 +115,5 @@ end
 (price..400).step(20) do |a|
 	puts a
 end
+
+
