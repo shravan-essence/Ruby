@@ -11,3 +11,4 @@ word.chars do |x|
 end
 
 puts "Count of vowel is: #{count}"
+
