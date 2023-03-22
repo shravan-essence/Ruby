@@ -4,8 +4,7 @@ Each date represents a video that was uploaded on that day. Return the number of
 Example:-upload_count(["Sept 22", "Sept 21", "Oct 15"], "Oct") ➞ 1
 "
 =end
-
-
+=begin
 def upload_count(date_array, month)
 	count = 0
 	date_array.each do |x|
@@ -13,6 +12,18 @@ def upload_count(date_array, month)
 			count += 1
 		end
 	end
+	puts "#{count}"
+end
+
+date_array.each do |x|
+		(count += 1) if x.include? month
+	end
+=end
+
+
+def upload_count(date_array, month)
+	count = 0
+	date_array.map{|x| (count += 1) if x.include? month}
 	puts "#{count}"
 end
 

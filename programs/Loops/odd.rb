@@ -22,9 +22,7 @@ for i in a
 end
 =end
 
-for i in a
-	(i%2==0)? (even_array.push i) : (odd_array.push i)
-end
+a.map{ |i| (i%2==0)? (even_array.push i) : (odd_array.push i)}
 
 puts "Even array is : #{even_array}"
 puts "Odd array is : #{odd_array}"

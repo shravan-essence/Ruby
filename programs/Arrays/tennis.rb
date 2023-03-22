@@ -18,9 +18,7 @@ Return an array of strings.
 def ping_pong(ping_array, win)
 	ping_array.each_with_index do |x, y|
 		if x == "Ping!"
-			if y == ping_array.size-1 && win == false
-				break
-			end
+			break if (y == ping_array.size-1 && win == false)
 			ping_array.insert(y+1,"Pong!")
 		end
 	end
@@ -28,5 +26,5 @@ def ping_pong(ping_array, win)
 end
 
 ping_array = ["Ping!","Ping!"]
-win = false
+win = true
 ping_pong(ping_array, win)

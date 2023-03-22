@@ -11,23 +11,11 @@ Example:-
   war_of_numbers([12, 90, 75]) ➞ 27"
 =end
 
-
 def war_of_numbers(numbers_array)
   sumodd = 0
   sumeven = 0
-  numbers_array.each do |x|
-    if x%2 != 0
-      sumodd += x
-    end
-    if x%2 == 0
-      sumeven +=x
-    end
-  end
-  if sumodd > sumeven
-    final = sumodd - sumeven
-  else
-    final = sumeven - sumodd
-  end
+  numbers_array.map{|x| (x%2 == 0) ?  (sumeven += x) : (sumodd += x)}
+  (sumodd > sumeven) ? (final = sumodd - sumeven) : (final = sumeven - sumodd)
   puts "The difference between Sum of Odd and Even is: #{final}"
 end
 

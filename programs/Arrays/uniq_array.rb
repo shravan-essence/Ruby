@@ -4,9 +4,6 @@ arr1 = [1, 4, 2, 4, 1, 7, 5, 8, 2, 10]
 
 arr2 =[]
 
-arr1.each do |x|
-	if !arr2.include? x
-		arr2.push x
-	end
-end
+
+arr1.map{ |x| (arr2.push x) if (!arr2.include? x)}
 puts arr2

@@ -14,4 +14,4 @@ else
 	puts str 
 end
 =end
-(str.start_with?("if")? (puts str1) : (puts str.prepend("if ")))
+(str.start_with?("if")? (puts str) : (puts str.prepend("if ")))

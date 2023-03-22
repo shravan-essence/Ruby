@@ -6,7 +6,6 @@ event :- number divisible with 2
 =end
 
 num = 10
-
 if num%2 == 0
 	puts "Number is Even"
 else

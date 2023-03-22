@@ -11,3 +11,7 @@ h.each do |x,y|
 	(y.is_a? Integer)? (sum += y) : next
 end
 puts "Sum of all integer values are: #{sum}"
+
+
+
+h.map{|k,v| v if v.is_a? Integer}.compact.sum

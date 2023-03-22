@@ -2,9 +2,4 @@
 
 print "Please enter number:- "
 num = gets.chomp.to_i
-
-if num.eql? 6
-	puts "#{num} is equal to 6."
-else
-	puts "#{num} is not equal to 6."
-end
+(num.eql? 6) ? (puts "#{num} is equal to 6.") : (puts "#{num} is not equal to 6.")

@@ -15,7 +15,7 @@ questions = [
  'Which school you studied?',
  'What is your favorite car?'
 ]
-ans = []
+ans = {}
 for i in questions
 	print i
 	ans.push gets.chomp

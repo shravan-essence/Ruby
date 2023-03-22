@@ -4,13 +4,15 @@
 puts "hello\n".chomp
 
 #=========sub method===========
+#replace the given string 
 puts "hello".sub("e", "i")
 puts "hello".sub("el", "ip")
 
 #=========gsub method===========
-puts "hello".gsub(/[aeiou]/, "*")
+puts "hello".gsub(/[aeiou]/, "o")
 
 #==========tr method============
+#replaces one by one letters in whole string
 puts "hello".tr("el","ip")
 
 #==========delete method==========

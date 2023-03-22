@@ -7,11 +7,7 @@ count = 0
 arr_vowel = ['a', 'e', 'i', 'o', 'u']
 
 word.chars do |x|
-	for a in arr_vowel
-		if a == x
-			count += 1
-		end
-	end
+	arr_vowel.map{ |a| (count += 1) if (a == x)}
 end
 
 puts "Count of vowel is: #{count}"

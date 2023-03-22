@@ -10,11 +10,7 @@ For example,
 def sumfunc(a,b)
   sum = 0
   range = (a < b) ? a..b : b..a
-
-  range.each do |x|
-    puts x
-    sum += x
-  end
+  range.map{ |x| puts x; sum += x}
   sum
 end
 
