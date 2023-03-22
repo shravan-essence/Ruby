@@ -18,18 +18,15 @@ Return an array of strings.
 def ping_pong(ping_array, win)
 	ping_array.each_with_index do |x, y|
 		if x == "Ping!"
-			if ping_array.last == x && win == "false"
+			if y == ping_array.size-1 && win == false
 				break
 			end
 			ping_array.insert(y+1,"Pong!")
 		end
 	end
-	#if ping_array.last == "Pong!" && win == false
-	#	ping_array.pop
-	#end
 	puts "#{ping_array}"
 end
-ping_array = ["Ping!","Ping!", "Ping!"]
-win = false
 
+ping_array = ["Ping!","Ping!"]
+win = false
 ping_pong(ping_array, win)

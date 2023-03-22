@@ -6,10 +6,10 @@ sum_odd = 0
 sum_even = 0
 arr1.each do |x|
 	if x%2 != 0
-		sumodd += x
+		sum_odd += x
 	end
 	if x%2 == 0
-		sumeven +=x
+		sum_even +=x
 	end
 end
 puts "Sum of Odd elements is: #{sum_odd}"
