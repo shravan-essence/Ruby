@@ -36,16 +36,37 @@ file.close
 #File.rename("hi.txt", "Hello.txt")
 
 File.delete("hi.txt")
-=end
 
+id,name
+1,banana
+2,apple
+3,orange
+4,grapes
+5,pineapple
+=end
 require 'csv'
 
-file = CSV.read("sample.csv")
+file = CSV.parse(File.read("sample.csv"),headers:true)
+puts "#{file.by_col[0]}"
+puts "#{file.by_col[1]}"
+puts file
 
-puts table = CSV.parse(File.read("sample.csv"), headers: true)
-puts "#{table.by_col[0]}"
-puts "#{table.by_col[1]}"
+file1 = CSV.open("sample.csv", "a+")
+file1.puts ["EndID","Endname"]
 
+=begin
+CSV.open("sample.csv", "a") do |file1|
+	file1.puts ['id','name']
+	file1.puts [1,'banana']
+	file1.puts [2,'apple']
+	file1.puts [3,'orange']
+	file1.puts [4,'grapes']
+	file1.puts [5,'pineapple']
+	file1.puts [6, 'chikoo']
+	file1.puts [7, "Mango"]
+	file1 << [8,"watermelon"]
+end
+=end
 =begin
 CSV.open("Cats.csv", "w") do |csv|
 	csv.puts [:white, 2]

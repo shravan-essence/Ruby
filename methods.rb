@@ -69,3 +69,40 @@ puts "#{arr1}"
 
 3.0.0 :088 > arr1.any?(&:even?)
  => true 
+
+3.0.0 :001 >  enu1 = (2..6).collect {|x| x * 10}
+ => [20, 30, 40, 50, 60] 
+3.0.0 :002 >  enu1 = (2..6).collect {|x| x > 3}
+ => [false, false, true, true, true] 
+3.0.0 :003 >  enu1 = (2..6).select {|x| x > 3}
+ => [4, 5, 6] 
+3.0.0 :004 >  enu1 = (2..6).select {|x| x + 3}
+ => [2, 3, 4, 5, 6] 
+3.0.0 :005 >  enu1 = (2..6).collect {|x| x + 3}
+ => [5, 6, 7, 8, 9] 
+3.0.0 :006 > 
+
+#=========================## Hash Methods ##=============================
+
+#========Reject method
+h = {foo: 0, bar: 1, baz: 2}
+h1 = h.reject {|key, value| key.start_with?('b') }
+h1 # => {:foo=>0}
+
+#===========Delete_if method
+
+h = {foo: 0, bar: 1, baz: 2}
+h.delete_if {|key, value| value > 0 } # => {:foo=>0}
+
+#=============Keep_if
+
+h = {foo: 0, bar: 1, baz: 2}
+h.keep_if { |key, value| key.start_with?('b') } # => {:bar=>1, :baz=>2}
+
+#==========Inject
+collection = [ [1, 'one'], [2, 'two'], [3, 'three'],[4, 'four'], [5, 'five'] ]
+collection.inject({}) do |hash, value|
+  hash[value.first] = value.last 
+  hash
+end
+ #=> {1=>"one", 2=>"two", 3=>"three", 4=>"four", 5=>"five"} 
