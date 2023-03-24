@@ -50,10 +50,10 @@ file = CSV.parse(File.read("sample.csv"),headers:true)
 puts "#{file.by_col[0]}"
 puts "#{file.by_col[1]}"
 puts file
-
+#Add data if the file not exists 
 file1 = CSV.open("sample.csv", "a+")
 file1.puts ["EndID","Endname"]
-
+file1.close
 =begin
 CSV.open("sample.csv", "a") do |file1|
 	file1.puts ['id','name']
@@ -75,3 +75,7 @@ CSV.open("Cats.csv", "w") do |csv|
 end
 =end
 
+
+
+1. Create file > add headers > add data
+2. if file exist then appent data only not headers
