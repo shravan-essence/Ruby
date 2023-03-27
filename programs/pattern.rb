@@ -1,3 +1,4 @@
+
 #Patterns ( triangle with star and numbers)
 =begin
     *

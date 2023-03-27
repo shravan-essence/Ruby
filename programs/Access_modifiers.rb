@@ -23,9 +23,17 @@ class Dog < Animal
 		super
 	end
 	def genderr
-		gender
+		age
 	end
 end
-
+=begin
+class hello
+	def genderr
+		Dog::gender
+	end
+end
+=end
 Dog.new.name("Max")
 Dog.new.genderr
+
+Dog.age

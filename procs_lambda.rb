@@ -29,10 +29,6 @@ yield_test { |n| puts ">>> I'm butting into the method!"
    puts "#{n}"
 }
 
-
-
-
-
 def proc_example(n)
   proc_demo = Proc.new{|x| x*5}  
   puts "#{proc_demo.call(n)}"
